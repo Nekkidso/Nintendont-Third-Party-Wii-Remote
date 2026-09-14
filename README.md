@@ -1,3 +1,38 @@
+# ⚠️ Unofficial Modified Build — Third-Party Wii Remote Support
+
+> **This fork contains an unofficial compatibility fix for certain third-party Wii Remotes.**
+>
+> The modification adds support for Wii Remotes that respond with **ACK `0x11`** during the extension-controller handshake.
+>
+> **Nothing else has been intentionally changed.**
+>
+> 🎮 **Tested successfully on real Wii hardware with a third-party Wii Remote.**
+>
+> 📦 **Ready-to-use build:**
+> See the [latest release](../../releases/latest) for a directly installable Wii package.
+
+### What is different?
+
+The official Nintendont code expects a specific response during the Wii Remote extension handshake. Some third-party Wii Remotes, including the **"NEW2in1"** type, use ACK `0x11` instead.
+
+This fork adds a targeted check for that response while preserving the original behavior for standard controllers.
+
+The source modification is limited to:
+
+```text
+kernel/BT.c
+```
+
+### Credits
+
+**Nintendont** is an open-source project originally developed by **FIX94** and its contributors.
+
+The identification of the third-party Wii Remote compatibility issue was inspired by the work of **revvv**, specifically the *"support 3rd party WiiMote NEW2in1"* change in the Nintendont-XBOX360 project.
+
+This fork does **not** claim ownership of the original Nintendont software.
+
+---
+
 ### Nintendont
 A Wii Homebrew Project to play GC Games on Wii and vWii on Wii U
 
