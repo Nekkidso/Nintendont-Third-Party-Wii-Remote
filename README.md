@@ -20,7 +20,9 @@ This fork adds a targeted check for that response while preserving the original 
 The source modification is limited to:
 
 ```text
+common/include/Metadata.h
 kernel/BT.c
+loader/source/main.c
 ```
 
 ### Credits
